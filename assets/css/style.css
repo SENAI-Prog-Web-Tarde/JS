@@ -267,6 +267,12 @@ footer iframe:hover {
     transform: scale(1.02);
 }
 
+.teste {
+    color: red;
+    background-color: #000;
+    font-size: 50px;
+}
+
 @media (max-width: 768px) {
     .toggle-icon {
         display: inline-block;
@@ -290,12 +296,12 @@ footer iframe:hover {
     }
 
     .sidebar-open {
-        visibility: visible;
-        opacity: 1;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     .hidden-scroll {
-        overflow: hidden;
+        overflow: hidden !important;
     }
 
     .main-menu .sub-menu {

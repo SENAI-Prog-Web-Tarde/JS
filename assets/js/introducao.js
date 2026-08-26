@@ -1,21 +1,25 @@
 // print("Olá mundo!") // Clássico Hello World
 // print(2+3)
 
+// console.log("Olá Mundo")
+
 // console.log("1" + "1")
-// console.log(1 + "1")
+// console.log(1 + "as")
 // console.log(1 + 1)
 // console.log(1 - 1)
-// console.log(1 - "1")
+// console.log(1 - "as")
 // console.log("1" - "1")
 
 // var nomeAluno = "João" // Declaração de variável obsoleta
 // let idadeAluno = 17 // Declaração de variável moderna
-// const CIDADE_ALUNO = "São Paulo" // Declaração de constante (valor imutável)
+// let cidadeAluno = "São Paulo" // Declaração de constante (valor imutável)
+// const CPF = "11111111111"
 // nomeLinguagem = "JavaScript" // Declaração de variável de forma global, mas sem palavra-chave (não recomendado)
 
 // console.log(nomeAluno);
 // console.log(idadeAluno);
-// console.log(CIDADE_ALUNO);
+// console.log(cidadeAluno);
+// console.log(CPF);
 // console.log(nomeLinguagem);
 
 // const podeDirigir = (idade) => {
@@ -26,8 +30,10 @@
 //     nome: "João",
 //     idade: 17,
 //     cidade: "São Paulo",
-//     podeDirigir: podeDirigir(this.idade)
+//     linguagem: "JS"
 // }
+
+// DADOS_ALUNO.podeDirigir = podeDirigir(DADOS_ALUNO.idade)
 
 // console.log(DADOS_ALUNO);
 
@@ -43,14 +49,14 @@
 // console.log("Multiplicação: " + (valor_a * valor_b)) // Multiplicação
 // console.log("Divisão: " + (valor_a / valor_b)) // Divisão
 // console.log("Resto da divisão: " + (valor_a % valor_b)) // Resto da divisão
-// console.log("Divisão (truncada): " + Math.trunc(valor_a / valor_b)) // Divisão
+// console.log("Divisão (truncada): " + Math.trunc(valor_a / valor_b)) // Divisão Inteira
 // console.log("Exponenciação: " + Math.pow(3, 2)) // Exponenciação
 
-// console.log(Number(DADOS_ALUNO.nome))
+// console.log(Number(DADOS_ALUNO.idade))
 // console.log(isNaN(DADOS_ALUNO.idade))
 // console.log(String(DADOS_ALUNO.idade))
 // console.log(Boolean(DADOS_ALUNO.linguagem))
-// console.log(typeof DADOS_ALUNO.nome)
+// console.log(typeof DADOS_ALUNO.podeDirigir)
 
 // DADOS_ALUNO.nome = "Maria"
 // DADOS_ALUNO.idade = 17
@@ -99,6 +105,11 @@
 //     }
 // }
 
+// const novoAluno = new Aluno("PedroTechJF", "15", "Maranhão");
+
+// console.log(novoAluno)
+
+
 // setTimeout(() => {
 //     console.log("Bem-vindo ao sistema do Smart Control!")
 
@@ -129,5 +140,5 @@
 
 // setInterval(() => {
 //     let bemVindoElement = document.getElementById("bem-vindo")
-//     bemVindoElement.innerHTML = `Bem-vindo ao sistema do Smart Control<br>Data e hora atual: ${new Date().toLocaleString().slice(0, -3)}`
+//     bemVindoElement.innerHTML = `Bem-vindo ao sistema do Smart Control<br>Data e hora atual: ${new Date().toLocaleString()}`
 // }, 1*1000)

@@ -82,12 +82,13 @@ formLogin.addEventListener('submit', (e) => {
     }
 
     const email = formLogin.querySelector('#login-email').value;
-    const senha = formLogin.querySelector('#senha').value;
+    const senha = formLogin.querySelector('#login-senha').value;
 
     validarCredenciais(email, senha);
 })
 
 formLogin.addEventListener('input', (e) => {
+    console.log(e.target)
     if (e.target.classList.contains('error')) {
         validarCamposVazios(formLogin);
     }

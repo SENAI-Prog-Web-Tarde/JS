@@ -5,7 +5,30 @@ botao.id = "botaoManipulacao";
 botao.type = "button";
 botao.innerText = "Botão Para Manipular Página";
 
-mainPage.append(botao);
+mainPage.appendChild(botao);
+
+const link = document.createElement('a');
+link.href = 'https://google.com';
+link.target = '_blank';
+link.id = 'linkTeste';
+link.classList.add('teste');
+link.innerText = 'Google';
+
+mainPage.appendChild(link)
+
+setTimeout(() => {
+    link.href = 'https://microsoft.com'
+    link.innerText = 'Microsoft';
+}, 5000)
+
+const link2 = document.createElement('a');
+link2.href = 'https://instagram.com';
+link2.target = '_blank';
+link2.id = 'link2Teste';
+link2.classList.add('teste');
+link2.innerText = 'Instagram';
+
+mainPage.appendChild(link2)
 
 const botaoManipulacao = document.querySelector('#botaoManipulacao');
 
@@ -17,7 +40,7 @@ botaoManipulacao.addEventListener('click', (event) => {
     alert("Botão pressionado!");
 
     const promptMsg = prompt("Digite seu nome: ");
-    const nomeElement = document.createElement('p');
+    const nomeElement = document.querySelector("#nomeDigitado") || document.createElement('p');
     nomeElement.id = "nomeDigitado";
     nomeElement.innerText = `Seja Bem-Vindo, ${promptMsg}!`;
 
@@ -33,6 +56,6 @@ botaoManipulacao.addEventListener('click', (event) => {
     }, 1*1000)
 
     setTimeout(() => {
-        clearInterval(tempoTela);
-    }, 10*1000)
+        document.querySelector("#tempoTela").remove();
+    }, 3*1000)
 })
