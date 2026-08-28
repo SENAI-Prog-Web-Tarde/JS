@@ -2,6 +2,7 @@
 function registrarLog(mensagem) {
     const agora = new Date();
     const horaFormatada = agora.toTimeString().split(' ')[0];
+    // const $feed = document.querySelector('#feed-logs');
     const $feed = $('#feed-logs');
     $feed.append(`<div>[${horaFormatada}] ${mensagem}</div>`);
     $feed.scrollTop($feed[0].scrollHeight);
@@ -41,8 +42,8 @@ $(document).on('click', '.btn-remover', function() {
     const $card = $(this).closest('.item-disp');
     const nome = $card.find('strong').text();
     $card.fadeOut(300, function() {
-    $(this).remove();
-    registrarLog(`Dispositivo removido do DOM: "${nome}".`);
+        $(this).remove();
+        registrarLog(`Dispositivo removido do DOM: "${nome}".`);
     });
 });
 
@@ -84,7 +85,7 @@ setInterval(function() {
             $('#alerta-temp').addClass('d-none');
         }, 4000);
     } else {
-    $elTemp.removeClass('text-danger text-warning').addClass('text-success');
+        $elTemp.removeClass('text-danger text-warning').addClass('text-success');
     }
 }, 3000);
 
