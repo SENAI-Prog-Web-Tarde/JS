@@ -6,17 +6,17 @@ let url = new URL(window.location.href);
 window.addEventListener('load', () => {
     const viewParam = url.searchParams.get('view');
     if (viewParam === 'cadastro') {
-        toggleView(document.querySelector('#btn-cadastro'));
+        mudarContainer(document.querySelector('#btn-cadastro'));
     } else {
-        toggleView(document.querySelector('#btn-login'));
+        mudarContainer(document.querySelector('#btn-login'));
     }
 });
 
-function toggleView(element) {
+function mudarContainer(botao) {
     const containerLogin = document.querySelector('.container-login');
     const containerCadastro= document.querySelector('.container-cadastro');
 
-    if (containerLogin.contains(element)) {
+    if (containerLogin.contains(botao)) {
         containerLogin.classList.remove('active');
         containerCadastro.classList.add('active');
         containerCadastro.style.animation = 'toRight 1s -0.3s cubic-bezier(0, 1.5, 1, 0.9) normal forwards'

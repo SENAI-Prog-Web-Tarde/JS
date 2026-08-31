@@ -12,6 +12,7 @@ link.href = 'https://google.com';
 link.target = '_blank';
 link.id = 'linkTeste';
 link.classList.add('teste');
+// setTimeout(() => {link.classList.remove('teste')}, 5000)
 link.innerText = 'Google';
 
 mainPage.appendChild(link)
@@ -32,12 +33,16 @@ mainPage.appendChild(link2)
 
 const botaoManipulacao = document.querySelector('#botaoManipulacao');
 
+
+
 botaoManipulacao.addEventListener('click', (event) => {
     event.preventDefault();
 
     console.log(event.target);
 
     alert("Botão pressionado!");
+
+    // event.target.style.fontSize = '20px'
 
     const promptMsg = prompt("Digite seu nome: ");
     const nomeElement = document.querySelector("#nomeDigitado") || document.createElement('p');
@@ -56,6 +61,7 @@ botaoManipulacao.addEventListener('click', (event) => {
     }, 1*1000)
 
     setTimeout(() => {
-        document.querySelector("#tempoTela").remove();
-    }, 3*1000)
+        // document.querySelector("#tempoTela").remove();
+        clearInterval(tempoTela)
+    }, 10*1000)
 })
