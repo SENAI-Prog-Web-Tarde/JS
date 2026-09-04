@@ -72,7 +72,7 @@ setInterval(function() {
 
     const $elTemp = $('#valor-temp');
     $elTemp.text(`${tempSimulada} °C`);
-        $('#valor-consumo').text(`${consumoSimulado} W`);
+    $('#valor-consumo').text(`${consumoSimulado} W`);
 
     if (tempSimulada > 30.0) {
         $elTemp.removeClass('text-success text-warning').addClass('text-danger');
